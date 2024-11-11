@@ -10,6 +10,8 @@ import com.dungnd.mvvm.ui.edit.EditProfileViewModel
 import com.dungnd.mvvm.ui.favorite.FavoritesViewModel
 import com.dungnd.mvvm.ui.home.HomeViewModel
 import com.dungnd.mvvm.ui.main.MainViewModel
+import com.dungnd.mvvm.ui.mainfragment.MainFragmentViewModel
+import com.dungnd.mvvm.ui.mainfragment.mainFragment
 import com.dungnd.mvvm.ui.splash.SplashViewModel
 import dagger.Binds
 import dagger.Module
@@ -55,5 +57,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(CategoriesViewModel::class)
     internal abstract fun categoriesViewModel(viewModel: CategoriesViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainFragmentViewModel::class)
+    internal abstract fun mainFragmentViewModel(viewModel: MainFragmentViewModel): ViewModel
 
 }

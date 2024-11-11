@@ -6,6 +6,7 @@ import com.dungnd.mvvm.ui.edit.EditProfileFragment
 import com.dungnd.mvvm.ui.favorite.FavoritesFragment
 import com.dungnd.mvvm.ui.home.HomeFragment
 import com.dungnd.mvvm.ui.main.MainActivity
+import com.dungnd.mvvm.ui.mainfragment.mainFragment
 import com.dungnd.mvvm.ui.splash.SplashFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -33,4 +34,7 @@ abstract class ActivityBindingModule {
 
     @ContributesAndroidInjector
     abstract fun categoriesFragment(): CategoriesFragment
+
+    @ContributesAndroidInjector
+    abstract fun mainFragment(): mainFragment
 }

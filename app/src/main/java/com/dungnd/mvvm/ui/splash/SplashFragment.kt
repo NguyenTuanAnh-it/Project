@@ -1,7 +1,10 @@
 package com.dungnd.mvvm.ui.splash
 
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.dungnd.mvvm.R
 import com.dungnd.mvvm.databinding.FragmentSplashBinding
@@ -14,7 +17,10 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>() {
 
     override fun initView() {
         Handler(Looper.getMainLooper()).postDelayed({
-            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
         }, 2000)
     }
+
+
+
 }
