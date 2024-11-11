@@ -13,17 +13,25 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override fun initView() {
         val adapter = ViewPagerAdapter(this)
         binding.vpPage.adapter = adapter
-        binding.vpPage.isUserInputEnabled = false
-        binding.btmNav.setOnItemSelectedListener{
+        binding.vpPage.isUserInputEnabled = true
+        binding.btmNav.setOnItemSelectedListener {
+            // Kiểm tra xem Fragment hiện tại đã được chọn chưa trước khi chuyển đổi
+            val currentFragment = binding.vpPage.currentItem
             when (it.itemId) {
                 R.id.homeFood -> {
-                    binding.vpPage.currentItem = 0
+                    if (currentFragment != 0) {
+                        binding.vpPage.currentItem = 0
+                    }
                 }
                 R.id.favorite -> {
-                    binding.vpPage.currentItem = 1
+                    if (currentFragment != 1) {
+                        binding.vpPage.currentItem = 1
+                    }
                 }
                 else -> {
-                    binding.vpPage.currentItem = 2
+                    if (currentFragment != 2) {
+                        binding.vpPage.currentItem = 2
+                    }
                 }
             }
             return@setOnItemSelectedListener true

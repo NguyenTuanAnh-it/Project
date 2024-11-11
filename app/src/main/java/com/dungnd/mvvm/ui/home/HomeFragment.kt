@@ -18,10 +18,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override fun initView() {
 //        adapter.onPhotoClick = {
 //            findNavController().navigate(
-//                R.id.action_homeFragment_to_deta,
-//                bundleOf(
-//                    Pair("key", it?.title)
-//                )
+//                R.id.action_homeFragment_to_favoritesFragment
 //            )
 //        }
 //        binding.rcvData.adapter = adapter
